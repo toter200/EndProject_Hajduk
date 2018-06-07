@@ -4,12 +4,12 @@ Ending Project for Computer Sience 2018
 TODO as of 2018-06-07::
 
 )Define all pc parts:
-  -GPU(finish)
-  -Power supply
-  -Case
-  -Drive
-  -Fans
-  -RAM
+  -GPU(finish)																																													
+  -Power supply																													
+  -Case																									
+  -Drive																			
+  -Fans																						
+  -RAM																												
   
 )Find out how to get Data from Database
 )Set up data for using in WPF
