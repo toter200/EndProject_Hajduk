@@ -4,11 +4,8 @@ Ending Project for Computer Sience 2018
 TODO as of 2018-06-08::
 
 )Define all pc parts:
-  -GPU(constructor finish)																																													
-  -Power supply																													
-  -Case																									
-  -Drive																			
   -Fans																						
+  -Drive																			
   -RAM																												
   
 )Find out how to get Data from Database
@@ -24,3 +21,6 @@ TODO as of 2018-06-08::
 Optional:
   -Make Unitest
   -Look for things you missed (u sureley did :])
+  
+ last hours before submission check for additional features
+ Compile, make installer send to frend to test.
