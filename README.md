@@ -1,10 +1,10 @@
 # EndProject_Hajduk
 Ending Project for Computer Sience 2018
 
-TODO as of 2018-06-07::
+TODO as of 2018-06-08::
 
 )Define all pc parts:
-  -GPU(finish)																																													
+  -GPU(constructor finish)																																													
   -Power supply																													
   -Case																									
   -Drive																			
