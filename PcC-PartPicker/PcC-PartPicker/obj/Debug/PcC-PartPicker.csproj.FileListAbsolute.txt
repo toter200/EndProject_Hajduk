@@ -16,3 +16,6 @@ C:\Users\danie\OneDrive\Pulpit\Pc-PartPicker\EndProject_Hajduk\PcC-PartPicker\Pc
 C:\Users\danie\OneDrive\Pulpit\Pc-PartPicker\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\obj\Debug\PcC-PartPicker.csproj.CoreCompileInputs.cache
 C:\Users\danie\OneDrive\Pulpit\Pc-PartPicker\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\obj\Debug\PcC-PartPicker.exe
 C:\Users\danie\OneDrive\Pulpit\Pc-PartPicker\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\obj\Debug\PcC-PartPicker.pdb
+C:\Users\schueler\Desktop\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\bin\Debug\PcC-PartPicker.exe.config
+C:\Users\schueler\Desktop\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\obj\Debug\PcC-PartPicker.exe
+C:\Users\schueler\Desktop\EndProject_Hajduk\PcC-PartPicker\PcC-PartPicker\obj\Debug\PcC-PartPicker.pdb

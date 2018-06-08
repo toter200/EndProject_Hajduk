@@ -21,64 +21,64 @@ namespace PcC_PartPicker
         /// <summary>
         /// Product name of MB
         /// </summary>
-        public string Model { get; set; }
+        public string Model { get; private set; }
 
         /// <summary>
         /// Compatible CPU Socket
         /// </summary>
-        public string Socket { get; set; }
+        public string Socket { get; private set; }
 
         /// <summary>
         /// standardized Size of MB (E_ATX, ATX, Mini_ATX, Micro_ATX, ITX)
         /// </summary>
-        public Formfactor Size { get; set; }
+        public Formfactor Size { get; private set; }
 
         /// <summary>
         /// Maximum of supported Memory
         /// </summary>
-        public string Memorysupport { get; set; }
+        public string Memorysupport { get; private set; }
 
         /// <summary>
         /// Amount of M.2 Slots on MB
         /// </summary>
-        public int M_2Slots { get; set; }
+        public int M_2Slots { get; private set; }
 
         /// <summary>
         /// Amount of Sata POrts on MB
         /// </summary>
-        public int SataPorts { get; set; }
+        public int SataPorts { get; private set; }
 
         /// <summary>
         /// Model of LAN Module
         /// </summary>
-        public string LanModule { get; set; }
+        public string LanModule { get; private set; }
 
         /// <summary>
         /// Model of Sound Module
         /// </summary>
-        public string SoundModule { get; set; }
+        public string SoundModule { get; private set; }
 
         /// <summary>
         /// Amount of USB 3.1 Ports
         /// </summary>
-        public int Usb3_1Ports { get; set; }
+        public int Usb3_1Ports { get; private set; }
 
         /// <summary>
         /// Amount of USB 2.0 Ports
         /// </summary>
-        public int Usb2Ports { get; set; }
+        public int Usb2Ports { get; private set; }
 
         /// <summary>
         /// Amount of all Fan Headers
         /// </summary>
-        public int FanHeader { get; set; }
+        public int FanHeader { get; private set; }
 
         /// <summary>
         /// Supported Lightningcontoll Software 
         /// </summary>
-        public string LightningSoution { get; set; }
+        public string LightningSoution { get; private set; }
 
-        public float Price { get; set; }
+        public float Price { get; private set; }
 
         /// <summary>
         /// Creating a new Motherboard entry
