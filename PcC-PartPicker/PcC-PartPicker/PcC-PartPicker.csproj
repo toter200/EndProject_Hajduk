@@ -79,7 +79,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Case.cs" />
     <Compile Include="Cpu.cs" />
+    <Compile Include="Fan.cs" />
     <Compile Include="GPU.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,6 +95,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PartsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PowerSupply.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

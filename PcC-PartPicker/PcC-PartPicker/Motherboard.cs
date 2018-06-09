@@ -78,6 +78,9 @@ namespace PcC_PartPicker
         /// </summary>
         public string LightningSoution { get; private set; }
 
+        /// <summary>
+        /// Price for Product
+        /// </summary>
         public float Price { get; private set; }
 
         /// <summary>
