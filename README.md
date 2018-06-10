@@ -1,8 +1,8 @@
 # EndProject_Hajduk
 Ending Project for Computer Sience 2018
 
-TODO as of 2018-06-08::	
-  
+TODO as of 2018-06-10::	
+)Finish tables in sql and add 1 dataset to each  
 )Set up data for using in WPF
 )Raw Design WPF
 )Connect WPF to Logic
