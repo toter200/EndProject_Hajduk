@@ -9,7 +9,7 @@ namespace PcC_PartPicker
     /// <summary>
     /// Saves Data for a Computer Powersupply
     /// </summary>
-    class PowerSupply
+    public class PowerSupply
     {
         /// <summary>
         /// Manufacturer of PSU

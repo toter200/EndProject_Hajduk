@@ -10,7 +10,7 @@ namespace PcC_PartPicker
     /// <summary>
     /// Saves Data for a Computer Graphics Processor
     /// </summary>
-    class GPU
+    public class GPU
     {
         /// <summary>
         /// Manufacturer of GPU

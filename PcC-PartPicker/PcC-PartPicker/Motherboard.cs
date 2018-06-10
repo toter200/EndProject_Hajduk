@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PcC_PartPicker
 {
-    enum Formfactor { E_ATX, ATX, Mini_ATX, Micro_ATX, ITX }
+    public enum Formfactor { E_ATX, ATX, Mini_ATX, Micro_ATX, ITX }
 
     /// <summary>
     /// Saves Data for a Computer Motherboard
     /// </summary>
-    class Motherboard
+    public class Motherboard
     {
         /// <summary>
         /// Name of Manufacturer of MB

@@ -9,7 +9,7 @@ namespace PcC_PartPicker
     /// <summary>
     /// Saves data for Computer Case
     /// </summary>
-    class Case
+    public class Case
     {
         /// <summary>
         /// Manufacturer of Case

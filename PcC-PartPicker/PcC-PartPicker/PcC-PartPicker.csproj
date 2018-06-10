@@ -71,6 +71,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PreBuild.cs" />
+    <Compile Include="Ram.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,6 +83,7 @@
     </Compile>
     <Compile Include="Case.cs" />
     <Compile Include="Cpu.cs" />
+    <Compile Include="Drive.cs" />
     <Compile Include="Fan.cs" />
     <Compile Include="GPU.cs" />
     <Compile Include="MainWindow.xaml.cs">
