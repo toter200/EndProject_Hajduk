@@ -2,13 +2,9 @@
 Ending Project for Computer Sience 2018
 
 TODO as of 2018-06-08::
-
-)Define all pc parts:
-  -Fans																						
-  -Drive																			
-  -RAM																												
+																										
   
-)Find out how to get Data from Database
+-)Find out how to get Data from Database
 )Set up data for using in WPF
 )Raw Design WPF
 )Connect WPF to Logic
