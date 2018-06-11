@@ -25,93 +25,62 @@ namespace PcC_PartPicker
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection;
         string connectionString;
 
-        public ObservableCollection<Cpu> cpuList;
-        public ObservableCollection<Motherboard> motherboardList;
-        public ObservableCollection<GPU> gpulist;
-        public ObservableCollection<PowerSupply> psuList;
+        private List<Fan> fans = new List<Fan>();
 
+        public ObservableCollection<object> allParts;
+ 
         public MainWindow()
         {
             InitializeComponent();
-            cpuList = new ObservableCollection<Cpu>();
             connectionString = ConfigurationManager.ConnectionStrings["PcC_PartPicker.Properties.Settings.PartsConnectionString"].ConnectionString;
-            PopulateCPU();
-            Items_LB.ItemsSource = cpuList;
-        }
+            SQLDataPicker dataPicker = new SQLDataPicker(connectionString);
+            allParts = new ObservableCollection<object>();
 
-         private void PopulateCPU()
-        {
-            /*using (connection = new SqlConnection(connectionString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT Brand FROM CPU", connection))
+            foreach (var item in dataPicker.GetAllCPU())
             {
-                DataTable cputable = new DataTable();
-                adapter.Fill(cputable);
-
-
-                foreach (var item in cputable.AsDataView())
-                {
-                    Items_LB.ItemsSource =  item;
-                }
-
-                //ItemAttributes_DG.ItemsSource = cputable.AsDataView();
-
-            }*/
-
-            connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("Select * FROM CPU");
-            command.Connection = connection;
-            connection.Open();
-            using (connection)
-            using (var reader = command.ExecuteReader())
-            {
-                for (int i = 0; i < 1; i++)
-                {
-                    reader.Read();
-                    string brand = reader.GetString(1);
-                    string model = reader.GetString(2);
-                    int cores = reader.GetInt32(3); 
-                    int threads = reader.GetInt32(4); 
-                    double baseclock = reader.GetDouble(5);
-                    double boostclock = reader.GetDouble(6);
-                    string socket = reader.GetString(7);
-                    int tdp = reader.GetInt32(8);
-                    int l3chache = reader.GetInt32(9);
-                    int maxmem = reader.GetInt32(10);
-                    bool unlocked;
-                    if (reader.GetSqlBoolean(11) == true)
-                    {
-                        unlocked = true;
-                    }
-                    else
-                    {
-                        unlocked = false;
-                    }
-                    double price = reader.GetDouble(12);
-                    Cpu cpu = new Cpu(brand, model, cores, threads, baseclock, boostclock, socket, tdp, l3chache, maxmem, unlocked, price);
-                    cpuList.Add(cpu);
-                }
-                
-
+                allParts.Add(item);
             }
-            connection.Close();
-            /*SqlCommand command = new SqlCommand();
-            command.Connection = connection;
-            connection.Open();
-
-            string Brand = command.ExecuteScalar("dwasdAWd");
-            string brand = (string)new SqlCommand("Select Brand FROM CPU").ExecuteScalar();
-            string model = (string)new SqlCommand("Select Model FROM CPU").ExecuteScalar();
-            connection.Close();
-
-            */
+            foreach (var item in dataPicker.GetAllGPU())
+            {
+                allParts.Add(item);
+            }
+            foreach (var item in dataPicker.GetAllMB())
+            {
+                allParts.Add(item);
+            }
+            foreach (var item in dataPicker.GetAllFAN())
+            {
+                allParts.Add(item);
+                fans.Add(item);
+            }
+            foreach (var item in dataPicker.GetAllCase(fans))
+            {
+                allParts.Add(item);
+            }
+            Items_LB.ItemsSource = allParts;
+            foreach (var item in dataPicker.GetAllRam())
+            {
+                allParts.Add(item);
+            }
+            foreach (var item in dataPicker.GetAllDrive())
+            {
+                allParts.Add(item);
+            }
+            foreach (var item in dataPicker.GetAllPowerSupply())
+            {
+                allParts.Add(item);
+            }
+            Items_LB.ItemsSource = allParts;
         }
+
+         
 
         private void Items_LB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ItemAttributes_DG.ItemsSource = new Cpu[] { (Cpu)Items_LB.SelectedItem };
+            ItemAttributes_DG.ItemsSource = new object[] { (object)Items_LB.SelectedItem };
         }
+
     }
 }

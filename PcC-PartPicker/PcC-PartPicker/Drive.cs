@@ -49,7 +49,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Price of Drive
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
         /// <summary>
         /// Creating a new Entry for Drive
@@ -62,7 +62,7 @@ namespace PcC_PartPicker
         /// <param name="read">Sequential Readspeed </param>
         /// <param name="write">Sequentia Writespeed</param>
         /// <param name="price">Price of Drive</param>
-        public Drive(string brand, string model, bool ssd, string connection, int size, int read, int write, float price)
+        public Drive(string brand, string model, bool ssd, string connection, int size, int read, int write, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -72,6 +72,11 @@ namespace PcC_PartPicker
             this.ReadSpeed = read;
             this.WriteSpead = write;
             this.Price = price;
+        }
+
+        public override string ToString()
+        {
+            return Brand + " " +  Model + " " +  Size + "GB" ;
         }
     }
 }

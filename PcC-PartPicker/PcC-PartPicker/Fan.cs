@@ -12,6 +12,11 @@ namespace PcC_PartPicker
     public class Fan
     {
         /// <summary>
+        /// ID of Fan in DB
+        /// </summary>
+        public int ID { get; private set; }
+
+        /// <summary>
         /// Manufacturer of Fan
         /// </summary>
         public string Brand { get; private set; }
@@ -29,7 +34,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Noise of Fan in db
         /// </summary>
-        public float Noise { get; private set; }
+        public int Noise { get; private set; }
 
         /// <summary>
         /// Maximal rounds per minute at 12V
@@ -39,7 +44,9 @@ namespace PcC_PartPicker
         /// <summary>
         /// Price of Fan
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
+
+
         /// <summary>
         /// Creating a new Entry for Fans
         /// </summary>
@@ -49,8 +56,9 @@ namespace PcC_PartPicker
         /// <param name="noise">Noise of Fan in db</param>
         /// <param name="rpm">Maximal rounds per minute at 12V</param>
         /// <param name="price">Price for Fan</param>
-        public Fan(string brand, string model, int size, float noise, int rpm, float price)
+        public Fan(int id,string brand, string model, int size, int noise, int rpm, double price)
         {
+            this.ID = id;
             this.Brand = brand;
             this.Model = model;
             this.Size = size;
@@ -58,5 +66,9 @@ namespace PcC_PartPicker
             this.Rpm = rpm;
         }
 
+        public override string ToString()
+        {
+            return Brand + " " + Model;
+        }
     }
 }

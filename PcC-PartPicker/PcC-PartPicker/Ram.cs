@@ -39,7 +39,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Price of RAM
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
         /// <summary>
         /// Creating a new Entry
@@ -50,7 +50,7 @@ namespace PcC_PartPicker
         /// <param name="speed">Base Frequecy of RAM</param>
         /// <param name="module">Amount of sticks</param>
         /// <param name="price">Price of RAM</param>
-        public Ram(string brand, string model, int size, int speed, int module, float price)
+        public Ram(string brand, string model, int size, int speed, int module, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -58,6 +58,11 @@ namespace PcC_PartPicker
             this.Speed = speed;
             this.Module = module;
             this.Price = price;
+        }
+
+        public override string ToString()
+        {
+            return Brand + " " + Model + " " + Size + "GB";
         }
     }
 }

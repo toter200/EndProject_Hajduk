@@ -30,17 +30,17 @@ namespace PcC_PartPicker
         /// <summary>
         /// Basic Frequency of GPU
         /// </summary>
-        public float BaseFrequency { get; private set; }
+        public double BaseFrequency { get; private set; }
         
         /// <summary>
         /// Maximum Frequency of GPU
         /// </summary>
-        public float BoostFrequency { get; private set; }
+        public double BoostFrequency { get; private set; }
 
         /// <summary>
         /// Power index based on Teraflops
         /// </summary>
-        public decimal TeraFlops { get; private set; }
+        public double TeraFlops { get; private set; }
 
         /// <summary>
         /// Generation and type of Memory
@@ -55,7 +55,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Basic frequency
         /// </summary>
-        public float MemoryClock { get; private set; }
+        public double MemoryClock { get; private set; }
 
         /// <summary>
         /// Connection between CPU RAM and GPU RAM 
@@ -75,7 +75,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// MSRP of GPU
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
         /// <summary>
         /// Createing a new GPU Entry
@@ -93,8 +93,8 @@ namespace PcC_PartPicker
         /// <param name="membandwidth">Maximum operating size of GPU memory</param>
         /// <param name="tdp">Powerdelivery of GPU</param>
         /// <param name="price">MSRP of GPU</param>
-        public GPU(string brand, string model, int cores, float basefreqency, float boostfrequency, decimal tflops,
-                   string memtype, int memsize, float memfreq, int membus, int membandwidth, int tdp, float price)
+        public GPU(string brand, string model, int cores, double basefreqency, double boostfrequency, double tflops,
+                   string memtype, int memsize, double memfreq, int membus, int membandwidth, int tdp, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -110,6 +110,11 @@ namespace PcC_PartPicker
             this.Tdp = tdp;
             this.Price = price;
 
+        }
+
+        public override string ToString()
+        {
+            return Brand + " " + Model;
         }
     }
 }

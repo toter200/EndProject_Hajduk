@@ -73,6 +73,7 @@
     </ApplicationDefinition>
     <Compile Include="PreBuild.cs" />
     <Compile Include="Ram.cs" />
+    <Compile Include="SQLDataPicker.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

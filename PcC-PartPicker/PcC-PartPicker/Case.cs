@@ -42,11 +42,6 @@ namespace PcC_PartPicker
         public int MaxRad { get; private set; }
 
         /// <summary>
-        /// Minimum needed PSU size
-        /// </summary>
-        public Formfactor PSUSize { get; private set; }
-
-        /// <summary>
         /// Side Panel Material (If no window = "none")
         /// </summary>
         public string SideGlas { get; private set; }
@@ -54,7 +49,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// All preinstalled Fans
         /// </summary>
-        public Fan[] PreinstalledFans { get; private set; }
+        public List<Fan> PreinstalledFans { get; private set; }
 
         /// <summary>
         /// Color of Case
@@ -64,7 +59,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// MSRP of Case
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
 
         /// <summary>
@@ -81,7 +76,7 @@ namespace PcC_PartPicker
         /// <param name="color">Color of Case</param>
         /// <param name="Price">MSRP of Case</param>
         public Case(string brand, string model, Formfactor size, int hdd, int ssd, int maxrad, string sideglas,
-                    Fan[] fans, string color, float price)
+                    List<Fan> fans, string color, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -93,6 +88,11 @@ namespace PcC_PartPicker
             this.PreinstalledFans = fans;
             this.Color = color;
             this.Price = price;
+        }
+
+        public override string ToString()
+        {
+            return Brand + " " + Model;
         }
 
     }

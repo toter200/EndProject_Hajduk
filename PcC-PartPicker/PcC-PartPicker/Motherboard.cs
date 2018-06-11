@@ -36,7 +36,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Maximum of supported Memory
         /// </summary>
-        public string Memorysupport { get; private set; }
+        public int Memorysupport { get; private set; }
 
         /// <summary>
         /// Amount of M.2 Slots on MB
@@ -81,7 +81,7 @@ namespace PcC_PartPicker
         /// <summary>
         /// Price for Product
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
         /// <summary>
         /// Creating a new Motherboard entry
@@ -100,8 +100,8 @@ namespace PcC_PartPicker
         /// <param name="fanHeader">Amount of all Fan Headers</param>
         /// <param name="rgb">Supported Lightningcontoll Software</param>
         /// <param name="price">Price for Product</param>
-        public Motherboard(string brand, string model, string socket, Formfactor size, string memsup, int m_2Slots, int sataPorts,
-                           string lanModule, string soundModule, int usb3, int usb2, int fanHeader, string rgb, float price)
+        public Motherboard(string brand, string model, string socket, Formfactor size, int memsup, int m_2Slots, int sataPorts,
+                           string lanModule, string soundModule, int usb3, int usb2, int fanHeader, string rgb, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -116,6 +116,12 @@ namespace PcC_PartPicker
             this.Usb2Ports = usb2;
             this.FanHeader = fanHeader;
             this.LightningSoution = rgb;
+            this.Price = price;
         }
+        public override string ToString()
+        {
+            return Brand + " " + Model;
+        }
+
     }
 }

@@ -57,6 +57,9 @@ namespace PcC_PartPicker
         /// </summary>
         public bool Unlocked { get; set; }
 
+        /// <summary>
+        /// MSRP of CPU
+        /// </summary>
         public double Price { get; set; }
 
 
@@ -98,5 +101,6 @@ namespace PcC_PartPicker
         {
             return Brand + " " + Model;
         }
+
     }
 }

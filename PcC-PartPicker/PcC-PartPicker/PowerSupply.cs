@@ -59,10 +59,10 @@ namespace PcC_PartPicker
         /// <summary>
         /// MSRP of PSU
         /// </summary>
-        public float Price { get; private set; }
+        public double Price { get; private set; }
 
         /// <summary>
-        /// 
+        /// Vreating a new entry for a PowerSupply
         /// </summary>
         /// <param name="brand">Manufacturer of PSU</param>
         /// <param name="model">Productname of PSU</param>
@@ -75,7 +75,7 @@ namespace PcC_PartPicker
         /// <param name="cabletype">Isolation of Cable(Sleved, Rubber,...)</param>
         /// <param name="price">MSRP of PSU</param>
         public PowerSupply(string brand, string model, int wattage, Formfactor size,  string efficiency, bool modularity, bool multiGPU,
-                           int maxsata, string cabletype, float price)
+                           int maxsata, string cabletype, double price)
         {
             this.Brand = brand;
             this.Model = model;
@@ -89,13 +89,10 @@ namespace PcC_PartPicker
             this.Price = price;
         }
 
-        /// <summary>
-        /// Adding Custom Sleved razor cables, changeing cabletype and Size
-        /// </summary>
-        public void CustomSleveing()
+
+        public override string ToString()
         {
-            this.CableType = "Sleved";
-            this.Size = Formfactor.E_ATX;
+            return Brand + " " + Model;
         }
     }
 }
