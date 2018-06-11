@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PcC_PartPicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1024">
+        Title="PC-Part Picker" Height="800" Width="1024">
     <Grid>
         <DataGrid x:Name="ItemAttributes_DG" HorizontalAlignment="Left" Height="48" Margin="10,324,0,0" VerticalAlignment="Top" Width="996"/>
         <ListBox x:Name="Items_LB" HorizontalAlignment="Left" Height="258" Margin="10,32,0,0" VerticalAlignment="Top" Width="212" SelectionChanged="Items_LB_SelectionChanged"/>
+        <Button x:Name="AddToList_Btn" Content="Add to List" HorizontalAlignment="Left" Margin="300,403,0,0" VerticalAlignment="Top" Width="100" Height="40" FontSize="18" FontFamily="Calibri" Click="AddToList_Btn_Click" />
+        <ListBox x:Name="WishList_LB" HorizontalAlignment="Left" Height="277" Margin="766,403,0,0" VerticalAlignment="Top" Width="204"/>
 
     </Grid>
 </Window>
